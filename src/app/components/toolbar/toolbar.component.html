@@ -1,0 +1,20 @@
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <a [routerLink]="['/']" routerLinkActive="router-link-active">
+      <img class="example-logo" src="assets/images/angular-white-transparent.svg" alt="">
+    </a>
+    <!-- <span>Angular7</span> -->
+    <span class="example-spacer"></span>
+    <mat-icon class="example-icon">verified_user</mat-icon>
+    <mat-icon class="example-icon">favorite</mat-icon>
+    <button mat-icon-button [matMenuTriggerFor]="menu">
+      <mat-icon>more_vert</mat-icon>
+    </button>
+    <mat-menu #menu="matMenu">
+      <button [routerLink]="['/dashboard']" mat-menu-item>
+        <mat-icon>dashboard</mat-icon>
+        <span>Dashboard</span>
+      </button>
+    </mat-menu>
+  </mat-toolbar-row>
+</mat-toolbar>
